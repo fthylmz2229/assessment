@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace assessment.contact.db.Entities
+namespace assessment.contact.api.CQRS.Query.Kisi.Response
 {
-  public class Kisi
+  public class GetAllKisiQueryResponse
   {
-    public int Id { get; set; }
+    public long Id { get; set; }
     public string Ad { get; set; }
     public string Soyad { get; set; }
     public string Firma { get; set; }
-    public bool SilindiMi { get; set; } = false;
   }
 }

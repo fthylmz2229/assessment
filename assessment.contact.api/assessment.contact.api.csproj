@@ -4,10 +4,38 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\fthyl\OneDrive\Masaüstü\Assessment\assessment\assessment.contact.api\assessment.contact.api.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="MediatR" Version="10.0.1" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="CQRS\Command\IletisimBilgiTipi\Response\" />
+    <Folder Include="CQRS\Command\IletisimBilgiTipi\Request\" />
+    <Folder Include="CQRS\Command\KisiIletisimBilgi\Request\" />
+    <Folder Include="CQRS\Command\KisiIletisimBilgi\Response\" />
+    <Folder Include="CQRS\Handler\CommandHandler\IletisimBilgiTipi\" />
+    <Folder Include="CQRS\Handler\CommandHandler\KisiIletisimBilgi\" />
+    <Folder Include="CQRS\Handler\QueryHandler\IletisimBilgiTipi\" />
+    <Folder Include="CQRS\Handler\QueryHandler\KisiIletisimBilgi\" />
+    <Folder Include="CQRS\Query\IletisimBilgiTipi\Request\" />
+    <Folder Include="CQRS\Query\IletisimBilgiTipi\Response\" />
+    <Folder Include="CQRS\Query\KisiIletisimBilgi\Request\" />
+    <Folder Include="CQRS\Query\KisiIletisimBilgi\Response\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\assessment.contact.business\assessment.contact.business.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>assessment.contact.api</name>
+    </assembly>
+    <members>
+        <member name="M:assessment.contact.api.Controllers.KisiController.Create(assessment.contact.api.CQRS.Command.Kisi.Request.CreateKisiCommandRequest)">
+            <summary>
+            Yeni Kişi oluşturur.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:assessment.contact.api.Controllers.KisiController.Delete(assessment.contact.api.CQRS.Command.Kisi.Request.DeleteKisiCommandRequest)">
+            <summary>
+            Mevcut kişiyi siler.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:assessment.contact.api.Controllers.KisiController.GetAll">
+            <summary>
+            Tüm Kişileri getirir.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
