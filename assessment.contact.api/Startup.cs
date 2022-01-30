@@ -44,6 +44,7 @@ namespace assessment.contact.api
       });
 
       services.AddTransient<IKisiService, KisiService>();
+      services.AddTransient<IKisiIletisimBilgiService, KisiIletisimBilgiService>();
 
       services.AddSingleton<CancellationTokenSource>();
 

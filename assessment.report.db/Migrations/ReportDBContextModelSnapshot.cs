@@ -26,6 +26,9 @@ namespace assessment.report.db.Migrations
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
+                    b.Property<string>("DosyaYolu")
+                        .HasColumnType("text");
+
                     b.Property<int>("RaporDurumId")
                         .HasColumnType("integer");
 

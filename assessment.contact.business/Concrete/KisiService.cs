@@ -22,12 +22,20 @@ namespace assessment.contact.business.Concrete
     }
     public async Task<bool> Delete(int Id)
     {
+      var temp = _context.Kisi.FirstOrDefault(x => x.Id == Id);
+      if (temp == null)
+        return await Task.Run(() => false);
       _context.Kisi.Update(new Kisi() { Id = Id, SilindiMi = true });
       return await Task.Run(() => (_context.SaveChanges() > 0 ? true : false));
     }
     public async Task<List<Kisi>> GetAll()
     {
       return await Task.Run(() => _context.Kisi.Where(x => x.SilindiMi == false).ToList());
+    }
+
+    public async Task<Kisi> Get(int Id)
+    {
+      return await Task.Run(() => _context.Kisi.FirstOrDefault(x => x.Id == Id));
     }
   }
 }

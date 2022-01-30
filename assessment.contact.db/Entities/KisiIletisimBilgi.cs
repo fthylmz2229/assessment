@@ -6,5 +6,8 @@
     public int IletisimBilgiTipiId { get; set; }
     public virtual IletisimBilgiTipi IletisimBilgiTipi { get; set; }
     public string BilgiIcerigi { get; set; }
+    public int KisiId { get; set; }
+    public virtual Kisi Kisi { get; set; }
+    public bool SilindiMi { get; set; } = false;
   }
 }

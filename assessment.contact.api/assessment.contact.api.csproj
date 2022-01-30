@@ -22,16 +22,10 @@
   <ItemGroup>
     <Folder Include="CQRS\Command\IletisimBilgiTipi\Response\" />
     <Folder Include="CQRS\Command\IletisimBilgiTipi\Request\" />
-    <Folder Include="CQRS\Command\KisiIletisimBilgi\Request\" />
-    <Folder Include="CQRS\Command\KisiIletisimBilgi\Response\" />
     <Folder Include="CQRS\Handler\CommandHandler\IletisimBilgiTipi\" />
-    <Folder Include="CQRS\Handler\CommandHandler\KisiIletisimBilgi\" />
     <Folder Include="CQRS\Handler\QueryHandler\IletisimBilgiTipi\" />
-    <Folder Include="CQRS\Handler\QueryHandler\KisiIletisimBilgi\" />
     <Folder Include="CQRS\Query\IletisimBilgiTipi\Request\" />
     <Folder Include="CQRS\Query\IletisimBilgiTipi\Response\" />
-    <Folder Include="CQRS\Query\KisiIletisimBilgi\Request\" />
-    <Folder Include="CQRS\Query\KisiIletisimBilgi\Response\" />
   </ItemGroup>
 
   <ItemGroup>

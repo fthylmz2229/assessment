@@ -1,7 +1,12 @@
-﻿using assessment.report.api.CQRS.Command.Rapor.Request;
+﻿using assessment.contact.api.CQRS.Command.Rapor.Request;
+using assessment.contact.api.CQRS.Command.Rapor.Response;
+using assessment.report.api.CQRS.Command.Rapor.Request;
 using assessment.report.api.CQRS.Command.Rapor.Response;
+using assessment.report.api.CQRS.Query.Rapor.Request;
+using assessment.report.api.CQRS.Query.Rapor.Response;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace assessment.contact.api.Controllers
@@ -19,15 +24,14 @@ namespace assessment.contact.api.Controllers
     }
 
     /// <summary>
-    /// Yeni rapor oluştur.
+    /// Yeni rapor isteği oluştur.
     /// </summary>
-    /// <param name="request"></param>
     /// <returns></returns>
     [HttpPost("[action]")]
     [ActionName("create")]
-    public async Task<IActionResult> Create([FromBody] CreateRaporCommandRequest request)
+    public async Task<IActionResult> Create()
     {
-      CreateRaporCommandResponse response = await _mediator.Send(request);
+      CreateRaporCommandResponse response = await _mediator.Send(new CreateRaporCommandRequest());
       return Ok(response);
     }
 
@@ -41,6 +45,33 @@ namespace assessment.contact.api.Controllers
     public async Task<IActionResult> UpdateRaporDurum([FromBody] UpdateRaporDurumCommandRequest request)
     {
       UpdateRaporDurumCommandResponse response = await _mediator.Send(request);
+
+      return Ok(response);
+    }
+
+    /// <summary>
+    /// Sistemin oluşturduğu raporların listelenmesi
+    /// </summary>
+    /// <returns></returns>
+    [HttpGet("[action]")]
+    [ActionName("get_all")]
+    public async Task<IActionResult> GetAll()
+    {
+      List<GetAllRaporQueryResponse> response = await _mediator.Send(new GetAllRaporQueryRequest());
+
+      return Ok(response);
+    }
+
+    /// <summary>
+    /// Sistemin oluşturduğu bir raporun detay bilgilerinin getirilmesi
+    /// </summary>
+    /// <param name="request"></param>
+    /// <returns></returns>
+    [HttpPost("[action]")]
+    [ActionName("get")]
+    public async Task<IActionResult> Get([FromBody] GetRaporCommandRequest request)
+    {
+      GetRaporCommandResponse response = await _mediator.Send(request);
 
       return Ok(response);
     }

@@ -17,7 +17,7 @@ namespace assessment.report.api.CQRS.Handler.CommandHandler.Rapor
 
     public async Task<UpdateRaporDurumCommandResponse> Handle(UpdateRaporDurumCommandRequest request, CancellationToken cancellationToken)
     {
-      var result = await _raporService.UpdateRaporDurum(request.Id, request.RaporDurumId);
+      var result = await _raporService.UpdateRaporDurum(request.Id, request.RaporDurumId, request.DosyaYolu);
       if (result)
         return await Task.FromResult(new UpdateRaporDurumCommandResponse() { Success = true, Message = "Rapor durum güncelleme başarılı." });
       else
