@@ -20,4 +20,8 @@
 
 -----------------------------------------------
 
-Buradan sonra proje hakkında bilgileri verelim.
+Proje için öncelikle PostgreSQL ve RabbitMQ ya ihtiyacımız var.
+Bilgisayarınıza Docker kurulumu yaptıktan sonra docker-compose.yml dosyasını çalıştırdığınızda bu servisler ayağa kalkacaktır.
+Varsayılan ayarlarla kurulduğunda uygulama çalışırken herhangi bir sorun olmayacaktır.
+
+
