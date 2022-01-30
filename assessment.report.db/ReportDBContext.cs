@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using assessment.report.db.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace assessment.report.db
 {
@@ -9,6 +10,7 @@ namespace assessment.report.db
 
     }
 
-
+    public virtual DbSet<Rapor> Rapor { get; set; }
+    public virtual DbSet<RaporDurum> RaporDurum { get; set; }
   }
 }
