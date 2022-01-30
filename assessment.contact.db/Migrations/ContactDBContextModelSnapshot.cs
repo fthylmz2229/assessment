@@ -70,9 +70,17 @@ namespace assessment.contact.db.Migrations
                     b.Property<int>("IletisimBilgiTipiId")
                         .HasColumnType("integer");
 
+                    b.Property<int>("KisiId")
+                        .HasColumnType("integer");
+
+                    b.Property<bool>("SilindiMi")
+                        .HasColumnType("boolean");
+
                     b.HasKey("Id");
 
                     b.HasIndex("IletisimBilgiTipiId");
+
+                    b.HasIndex("KisiId");
 
                     b.ToTable("KisiIletisimBilgi");
                 });
@@ -85,7 +93,15 @@ namespace assessment.contact.db.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("assessment.contact.db.Entities.Kisi", "Kisi")
+                        .WithMany()
+                        .HasForeignKey("KisiId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("IletisimBilgiTipi");
+
+                    b.Navigation("Kisi");
                 });
 #pragma warning restore 612, 618
         }

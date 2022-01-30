@@ -6,23 +6,50 @@
     <members>
         <member name="M:assessment.contact.api.Controllers.KisiController.Create(assessment.contact.api.CQRS.Command.Kisi.Request.CreateKisiCommandRequest)">
             <summary>
-            Yeni Kişi oluşturur.
+            Rehberde kişi oluşturma
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
         <member name="M:assessment.contact.api.Controllers.KisiController.Delete(assessment.contact.api.CQRS.Command.Kisi.Request.DeleteKisiCommandRequest)">
             <summary>
-            Mevcut kişiyi siler.
+            Rehberde kişi kaldırma
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
         <member name="M:assessment.contact.api.Controllers.KisiController.GetAll">
             <summary>
-            Tüm Kişileri getirir.
+            Rehberdeki kişilerin listelenmesi
             </summary>
             <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:assessment.contact.api.Controllers.KisiController.Get(assessment.contact.api.CQRS.Command.Kisi.Request.GetKisiCommandRequest)">
+            <summary>
+            Rehberdeki bir kişiyle ilgili iletişim bilgilerinin de yer aldığı detay bilgilerin getirilmesi
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:assessment.contact.api.Controllers.KisiIletisimBilgiController.Create(assessment.contact.api.CQRS.Command.KisiIletisimBilgi.Request.CreateKisiIletisimBilgiCommandRequest)">
+            <summary>
+            Rehberdeki kişiye iletişim bilgisi ekleme
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:assessment.contact.api.Controllers.KisiIletisimBilgiController.Delete(assessment.contact.api.CQRS.Command.KisiIletisimBilgi.Request.DeleteKisiIletisimBilgiCommandRequest)">
+            <summary>
+            Rehberdeki kişiden iletişim bilgisi kaldırma
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:assessment.contact.api.Controllers.KisiIletisimBilgiController.Rapor">
+            <summary>
+            Rehberdeki kişilerin bulundukları konuma göre istatistiklerini çıkartan bir rapor talebi
+            </summary>
             <returns></returns>
         </member>
     </members>

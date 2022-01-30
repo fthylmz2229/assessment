@@ -43,6 +43,8 @@ namespace assessment.report.api
 
       services.AddSingleton<CancellationTokenSource>();
 
+      services.AddHostedService<ConsumeRabbitMQHostedService>();
+
       services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
 
       services.AddControllers();

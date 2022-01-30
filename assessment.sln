@@ -13,7 +13,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assessment.report.db", "ass
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assessment.contact.business", "assessment.contact.business\assessment.contact.business.csproj", "{48B55219-6944-4C03-8812-287A32FC4382}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "assessment.report.business", "assessment.report.business\assessment.report.business.csproj", "{4E0BB058-EDFC-410F-B55F-0EA25A3A35AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assessment.report.business", "assessment.report.business\assessment.report.business.csproj", "{4E0BB058-EDFC-410F-B55F-0EA25A3A35AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B934A152-FD64-478B-9B29-E35D3AF27D99}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

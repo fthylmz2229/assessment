@@ -6,7 +6,6 @@ namespace assessment.report.api.CQRS.Command.Rapor.Request
 {
   public class CreateRaporCommandRequest : IRequest<CreateRaporCommandResponse>
   {
-    public DateTime TalepTarihi { get; set; }
-    public int RaporDurumId { get; set; }
+
   }
 }

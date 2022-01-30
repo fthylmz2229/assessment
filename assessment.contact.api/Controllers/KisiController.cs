@@ -22,7 +22,7 @@ namespace assessment.contact.api.Controllers
     }
 
     /// <summary>
-    /// Yeni Kişi oluşturur.
+    /// Rehberde kişi oluşturma
     /// </summary>
     /// <param name="request"></param>
     /// <returns></returns>
@@ -35,7 +35,7 @@ namespace assessment.contact.api.Controllers
     }
 
     /// <summary>
-    /// Mevcut kişiyi siler.
+    /// Rehberde kişi kaldırma
     /// </summary>
     /// <param name="request"></param>
     /// <returns></returns>
@@ -48,7 +48,7 @@ namespace assessment.contact.api.Controllers
     }
 
     /// <summary>
-    /// Tüm Kişileri getirir.
+    /// Rehberdeki kişilerin listelenmesi
     /// </summary>
     /// <param name="request"></param>
     /// <returns></returns>
@@ -57,6 +57,20 @@ namespace assessment.contact.api.Controllers
     public async Task<IActionResult> GetAll()
     {
       List<GetAllKisiQueryResponse> response = await _mediator.Send(new GetAllKisiQueryRequest());
+
+      return Ok(response);
+    }
+
+    /// <summary>
+    /// Rehberdeki bir kişiyle ilgili iletişim bilgilerinin de yer aldığı detay bilgilerin getirilmesi
+    /// </summary>
+    /// <param name="request"></param>
+    /// <returns></returns>
+    [HttpPost("[action]")]
+    [ActionName("get")]
+    public async Task<IActionResult> Get([FromBody] GetKisiCommandRequest request)
+    {
+      GetKisiCommandResponse response = await _mediator.Send(request);
 
       return Ok(response);
     }

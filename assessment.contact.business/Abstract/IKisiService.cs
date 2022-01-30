@@ -9,5 +9,6 @@ namespace assessment.contact.business.Abstract
     Task<Kisi> Add(Kisi model);
     Task<bool> Delete(int Id);
     Task<List<Kisi>> GetAll();
+    Task<Kisi> Get(int Id);
   }
 }

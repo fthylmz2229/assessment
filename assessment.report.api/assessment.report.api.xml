@@ -4,16 +4,28 @@
         <name>assessment.report.api</name>
     </assembly>
     <members>
-        <member name="M:assessment.contact.api.Controllers.RaporController.Create(assessment.report.api.CQRS.Command.Rapor.Request.CreateRaporCommandRequest)">
+        <member name="M:assessment.contact.api.Controllers.RaporController.Create">
             <summary>
-            Yeni Kişi oluşturur.
+            Yeni rapor isteği oluştur.
             </summary>
-            <param name="request"></param>
             <returns></returns>
         </member>
         <member name="M:assessment.contact.api.Controllers.RaporController.UpdateRaporDurum(assessment.report.api.CQRS.Command.Rapor.Request.UpdateRaporDurumCommandRequest)">
             <summary>
             Raporun durumunu güncellemek için kullanılır.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:assessment.contact.api.Controllers.RaporController.GetAll">
+            <summary>
+            Sistemin oluşturduğu raporların listelenmesi
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:assessment.contact.api.Controllers.RaporController.Get(assessment.contact.api.CQRS.Command.Rapor.Request.GetRaporCommandRequest)">
+            <summary>
+            Sistemin oluşturduğu bir raporun detay bilgilerinin getirilmesi
             </summary>
             <param name="request"></param>
             <returns></returns>

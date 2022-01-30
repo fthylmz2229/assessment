@@ -13,6 +13,7 @@ namespace assessment.report.db.Configurations
       builder.Property(x => x.Id).ValueGeneratedOnAdd().IsRequired(true).HasColumnName("id");
       builder.Property(x => x.TalepTarihi).IsRequired(true).HasColumnName("talep_tarihi");
       builder.Property(x => x.RaporDurumId).IsRequired(true).HasColumnName("talep_durum_id");
+      builder.Property(x => x.DosyaYolu).IsRequired(false).HasMaxLength(250).HasColumnName("dosya_yolu");
     }
   }
 }
