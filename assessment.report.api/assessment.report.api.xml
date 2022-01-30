@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>assessment.report.api</name>
+    </assembly>
+    <members>
+        <member name="M:assessment.contact.api.Controllers.RaporController.Create(assessment.report.api.CQRS.Command.Rapor.Request.CreateRaporCommandRequest)">
+            <summary>
+            Yeni Kişi oluşturur.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:assessment.contact.api.Controllers.RaporController.UpdateRaporDurum(assessment.report.api.CQRS.Command.Rapor.Request.UpdateRaporDurumCommandRequest)">
+            <summary>
+            Raporun durumunu güncellemek için kullanılır.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:assessment.contact.api.Controllers.RaporDurumController.GetAll">
+            <summary>
+            Rapor durumu belirlemek için kullanılacak olan sabitleri getirir.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

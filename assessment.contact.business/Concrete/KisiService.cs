@@ -24,7 +24,6 @@ namespace assessment.contact.business.Concrete
     {
       _context.Kisi.Update(new Kisi() { Id = Id, SilindiMi = true });
       return await Task.Run(() => (_context.SaveChanges() > 0 ? true : false));
-
     }
     public async Task<List<Kisi>> GetAll()
     {
